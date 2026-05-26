@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iarmcar | Підбір авто</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="selection-body">
+
+<header class="main-header">
+    <div class="container">
+        <a href="index.html" class="logo" style="text-decoration: none;">
+            <i class="fas fa-bolt"></i> IARM<span>CAR</span>
+        </a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="index.html#about">Про нас</a></li>
+                <li><a href="#footer">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-action">
+            <a href="selection.html" class="btn-outline active-btn">Підбір авто</a>
+        </div>
+    </div>
+</header>
+
+<main class="selection-page">
+    <section class="luxury-showcase container">
+        <h2 class="section-title anim-on-scroll">Ексклюзивні пропозиції</h2>
+        <div class="luxury-grid">
+            <div class="luxury-card anim-on-scroll">
+                <div class="luxury-img" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200');"></div>
+                <div class="luxury-content">
+                    <span class="badge">Premium</span>
+                    <h4>Porsche Panamera Turbo</h4>
+                    <p>Ідеал інженерної думки та швидкості.</p>
+                </div>
+            </div>
+
+            <div class="luxury-card anim-on-scroll">
+                <div class="luxury-img" style="background-image: url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=1200');"></div>
+                <div class="luxury-content">
+                    <span class="badge">Exclusive</span>
+                    <h4>Porsche 911 Turbo S</h4>
+                    <p>Агресивний дизайн та неймовірна потужність.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container text-center anim-on-scroll" style="margin-top: 50px;">
+        <h2 class="ultra-title">Вибери свої характеристики</h2>
+    </div>
+
+    <section class="filter-full-width anim-on-scroll">
+        <div class="container">
+            <form class="main-filter-form" id="carFilter">
+                <div class="filter-grid-two-rows">
+                    <div class="input-box-ria dropdown-container">
+                        <label class="floating-label">Марка</label>
+                        <input type="text" id="brandInput" placeholder="Оберіть марку" readonly>
+                        <div class="dropdown-list" id="brandList">
+                            <span data-value="Audi">Audi</span>
+                            <span data-value="BMW">BMW</span>
+                            <span data-value="Mercedes-Benz">Mercedes-Benz</span>
+                            <span data-value="Porsche">Porsche</span>
+                            <span data-value="Lexus">Lexus</span>
+                        </div>
+                    </div>
+
+                    <div class="input-box-ria dropdown-container disabled" id="modelContainer">
+                        <label class="floating-label">Модель</label>
+                        <input type="text" id="modelInput" placeholder="Спочатку марку" readonly>
+                        <div class="dropdown-list" id="modelList"></div>
+                    </div>
+
+                    <div class="input-box-ria">
+                        <label class="floating-label">Вартість до ($)</label>
+                        <input type="number" id="priceInput" placeholder="Ціна">
+                    </div>
+
+                    <div class="input-box-ria range-field">
+                        <label class="floating-label">Рік випуску: <span id="yearValue">2015</span></label>
+                        <div class="range-container">
+                            <input type="range" id="yearRange" min="2000" max="2026" value="2015" class="slider-ria">
+                        </div>
+                    </div>
+
+                    <div class="input-box-ria">
+                        <label class="floating-label">Пробіг до (км)</label>
+                        <input type="number" id="mileageInput" placeholder="Пробіг">
+                    </div>
+
+                    <div class="input-box-ria dropdown-container">
+                        <label class="floating-label">Пальне</label>
+                        <input type="text" id="fuelInput" placeholder="Будь-яке" readonly>
+                        <div class="dropdown-list">
+                            <span>Бензин</span>
+                            <span>Дизель</span>
+                            <span>Електро</span>
+                            <span>Гібрид</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-action-centered">
+                    <button type="button" class="btn-clear-filters" id="clearFilters">Очистити</button>
+                    <button type="submit" class="btn-premium-search">
+                        <span>Почати пошук</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer" id="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="logo">
+                    <i class="fas fa-bolt"></i> IARM<span>CAR</span>
+                </div>
+                <p>Ваш експертний помічник у світі вживаних та нових автомобілів. Допомагаємо обрати найкраще.</p>
+            </div>
+
+            <div class="footer-contacts">
+                <h4>Наші контакти</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <span>м. Київ, вул. Сержа-Лифаря, 16</span></p>
+                <p><i class="fas fa-phone"></i> <span>+38 (066) 409-36-27</span></p>
+                <p><i class="fas fa-envelope"></i> <span>office@iarmcar.com.ua</span></p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Ми в мережі</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/yura.iarmolskiy/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/iarmolskiy" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Iarmcar. Всі права захищені. Дипломна робота.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
